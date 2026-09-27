@@ -1,26 +1,14 @@
 /* =========================================
-   JASMINE WEBSITE
-========================================= */
-
-
-/* =========================================
    SUPABASE SETTINGS
-=========================================
-
-   Replace these two values with your own
-   Supabase Project URL and Publishable key.
-
 ========================================= */
 
-const SUPABASE_URL = "https://mlvsixtepwmcvraukftz.supabase.co/rest/v1/";
+const SUPABASE_URL = "https://mlvsixtepwmcvraukftz.supabase.co";
+
 const SUPABASE_KEY = "sb_publishable_vO__lN6U1yNPDsdu0WC5wQ_0Q-3m_M4";
 
 let supabaseClient = null;
 
-if (
-    SUPABASE_URL !== "https://mlvsixtepwmcvraukftz.supabase.co/rest/v1/" &&
-    SUPABASE_KEY !== "sb_publishable_vO__lN6U1yNPDsdu0WC5wQ_0Q-3m_M4"
-) {
+if (SUPABASE_URL && SUPABASE_KEY) {
     supabaseClient = window.supabase.createClient(
         SUPABASE_URL,
         SUPABASE_KEY

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>For Jasmine 🌸</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Supabase -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+
+<body>
+
+    <!-- =========================
+         LOCK SCREEN
+    ========================== -->
+
+    <div id="lockScreen">
+
+        <div class="lock-flower flower-one">🌸</div>
+        <div class="lock-flower flower-two">🌸</div>
+        <div class="lock-flower flower-three">🌸</div>
+
+        <div class="lock-content">
+
+            <div class="small-text">A LITTLE SOMETHING</div>
+
+            <h1>For Jasmine</h1>
+
+            <p class="lock-subtitle">
+                A little world made just for you 🌸
+            </p>
+
+            <div class="password-box">
+
+                <input
+                    id="passwordInput"
+                    type="password"
+                    maxlength="4"
+                    inputmode="numeric"
+                    placeholder="••••"
+                >
+
+                <button onclick="unlockSite()">
+                    Unlock
+                </button>
+
+            </div>
+
+            <p id="wrongPassword"></p>
+
+        </div>
+    </div>
+
+
+    <!-- =========================
+         MAIN WEBSITE
+    ========================== -->
+
+    <main id="website">
+
+        <!-- HERO -->
+
+        <section class="hero">
+
+            <div class="floating-flower">🌸</div>
+            <div class="floating-flower second">🌸</div>
+            <div class="floating-flower third">🌸</div>
+
+            <p class="eyebrow">MADE WITH LOVE</p>
+
+            <h1>
+                For <span>Jasmine</span>
+            </h1>
+
+            <p class="hero-text">
+                Because some people deserve a little corner
+                of the world made especially for them.
+            </p>
+
+            <div class="scroll-hint">
+                <span>Scroll to explore</span>
+                <div class="scroll-line"></div>
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             MESSAGE
+        ========================== -->
+
+        <section class="message-section reveal">
+
+            <div class="flower-decoration">🌸</div>
+
+            <p class="section-label">A MESSAGE FOR YOU</p>
+
+            <h2>Dear Jasmine</h2>
+
+            <div class="message-card">
+
+                <p>
+                    I wanted to make something that could remind you
+                    of just how special you are.
+                </p>
+
+                <p>
+                    You're someone whose presence can turn an ordinary
+                    moment into something worth remembering.
+                </p>
+
+                <p>
+                    So I made this little place for the memories,
+                    the smiles, the moments and everything that makes
+                    you, <strong>you.</strong>
+                </p>
+
+                <p class="signature">
+                    — Lewis 🌸
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             OUR MOMENTS
+        ========================== -->
+
+        <section class="gallery-section reveal">
+
+            <p class="section-label">OUR MEMORIES</p>
+
+            <h2>Our Moments 📸</h2>
+
+            <p class="section-description">
+                The memories we've made together belong here.
+            </p>
+
+            <div id="momentsGallery" class="gallery">
+
+                <div class="coming-soon" id="momentsEmpty">
+
+                    <div class="camera-icon">📸</div>
+
+                    <h3>Coming Soon...</h3>
+
+                    <p>
+                        Add the pictures you've taken together.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <label class="upload-button">
+
+                <input
+                    type="file"
+                    id="momentsInput"
+                    accept="image/*"
+                    multiple
+                    hidden
+                >
+
+                <span>＋ Add Our Pictures</span>
+
+            </label>
+
+            <p class="upload-status" id="momentsStatus"></p>
+
+        </section>
+
+
+        <!-- =========================
+             HER SMILE
+        ========================== -->
+
+        <section class="smile-section reveal">
+
+            <div class="smile-glow"></div>
+
+            <p class="section-label">ONE OF MY FAVORITE THINGS</p>
+
+            <h2>Her Beautiful Smile 😊</h2>
+
+            <p class="section-description">
+                A place for the pictures that capture that beautiful smile.
+            </p>
+
+            <div id="smileGallery" class="gallery">
+
+                <div class="coming-soon" id="smileEmpty">
+
+                    <div class="camera-icon">😊</div>
+
+                    <h3>Your pictures go here</h3>
+
+                    <p>
+                        Add your favorite smile pictures.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <label class="upload-button">
+
+                <input
+                    type="file"
+                    id="smileInput"
+                    accept="image/*"
+                    multiple
+                    hidden
+                >
+
+                <span>＋ Add Smile Pictures</span>
+
+            </label>
+
+            <p class="upload-status" id="smileStatus"></p>
+
+        </section>
+
+
+        <!-- =========================
+             FINAL MESSAGE
+        ========================== -->
+
+        <section class="final-section reveal">
+
+            <div class="big-flower">🌸</div>
+
+            <p class="section-label">ONE LAST THING</p>
+
+            <h2>
+                Keep smiling,
+                <span>Jasmine.</span>
+            </h2>
+
+            <p>
+                This little website may be made of code,
+                but every part of it was made to remind you
+                that you are appreciated.
+            </p>
+
+            <div class="heart">♡</div>
+
+            <small>
+                Website created with love for Jasmine 🌸
+            </small>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         MUSIC PLAYER
+    ========================== -->
+
+    <div id="musicPlayer">
+
+        <button id="musicButton" onclick="toggleMusic()">
+            ▶
+        </button>
+
+        <div class="music-info">
+
+            <strong>
+                We Fell in Love in October
+            </strong>
+
+            <span>
+                ♫ For Jasmine
+            </span>
+
+        </div>
+
+    </div>
+
+    <!-- Put your legally obtained audio file in assets/music.mp3 -->
+    <audio id="music" loop>
+        <source src="assets/music.mp3" type="audio/mpeg">
+    </audio>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

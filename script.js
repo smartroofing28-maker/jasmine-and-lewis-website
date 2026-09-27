@@ -12,14 +12,14 @@
 
 ========================================= */
 
-const SUPABASE_URL = "YOUR_SUPABASE_PROJECT_URL";
-const SUPABASE_KEY = "YOUR_SUPABASE_PUBLISHABLE_KEY";
+const SUPABASE_URL = "https://mlvsixtepwmcvraukftz.supabase.co/rest/v1/";
+const SUPABASE_KEY = "sb_publishable_vO__lN6U1yNPDsdu0WC5wQ_0Q-3m_M4";
 
 let supabaseClient = null;
 
 if (
-    SUPABASE_URL !== "YOUR_SUPABASE_PROJECT_URL" &&
-    SUPABASE_KEY !== "YOUR_SUPABASE_PUBLISHABLE_KEY"
+    SUPABASE_URL !== "https://mlvsixtepwmcvraukftz.supabase.co/rest/v1/" &&
+    SUPABASE_KEY !== "sb_publishable_vO__lN6U1yNPDsdu0WC5wQ_0Q-3m_M4"
 ) {
     supabaseClient = window.supabase.createClient(
         SUPABASE_URL,

@@ -3,18 +3,20 @@
 ========================================= */
 
 const SUPABASE_URL = "https://mlvsixtepwmcvraukftz.supabase.co";
-
 const SUPABASE_KEY = "sb_publishable_vO__lN6U1yNPDsdu0WC5wQ_0Q-3m_M4";
 
-let supabaseClient = null;
+let supabaseClient;
 
-if (SUPABASE_URL && SUPABASE_KEY) {
+try {
     supabaseClient = window.supabase.createClient(
         SUPABASE_URL,
         SUPABASE_KEY
     );
-}
 
+    console.log("✅ Supabase client created successfully");
+} catch (error) {
+    console.error("❌ Supabase connection error:", error);
+}
 
 /* =========================================
    PASSWORD
